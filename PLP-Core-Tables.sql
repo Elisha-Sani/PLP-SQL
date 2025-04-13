@@ -4,8 +4,8 @@ USE bookstore;
 
 -- Publisher table
 CREATE TABLE publisher (
-publisher_id INT PRIMARY KEY,
-publisher_name VARCHAR(255)
+	publisher_id INT PRIMARY KEY,
+	publisher_name VARCHAR(255)
 );
 
 -- book language table
@@ -28,16 +28,16 @@ CREATE TABLE book (
 -- author table
 CREATE TABLE author (
 	author_id INT PRIMARY KEY,
-    author_name VARCHAR(255)
+	author_name VARCHAR(255)
 );
 
 -- book author table
 CREATE TABLE book_author (
 	book_id INT,
-    author_id INT,
-    PRIMARY KEY (book_id, author_id),
-    FOREIGN KEY (book_id) REFERENCES book(book_id),
-    FOREIGN KEY (author_id) REFERENCES author(author_id)
+	author_id INT,
+	PRIMARY KEY (book_id, author_id),
+	FOREIGN KEY (book_id) REFERENCES book(book_id),
+	FOREIGN KEY (author_id) REFERENCES author(author_id)
 );
 
 
